@@ -3,24 +3,90 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>이력서 — Unity 게임 클라이언트 개발자</title>
+<title>이력서 — 손찬성 | Unity 게임 클라이언트 개발자</title>
 <style>
     @page { 9 size: A4; 10 margin: 20mm; 11 }
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background: #f0f2f5; font-size: 13px; color: #1a1a1a; line-height: 1.6; }
-  .page { max-width: 900px; margin: 28px auto; background: #fff; border-radius: 6px; box-shadow: 0 2px 20px rgba(0,0,0,.1); overflow: hidden; }
+    /* =========================
+           기본 설정
+        ========================= */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
+    body {
+        font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+        background: #f0f2f5;
+        font-size: 13px;
+        color: #1a1a1a;
+        line-height: 1.8;
+    }
+
+    .page {
+        max-width: 900px;
+        margin: 28px auto;
+        background: #fff;
+        border-radius: 6px;
+        box-shadow: 0 2px 20px rgba(0,0,0,.1);
+        overflow: hidden;
+    }
   /* 헤더 */
-  .header { background: #1a2a4a; color: #fff; padding: 36px 48px 32px; }
-  .header-top { display: flex; justify-content: space-between; align-items: flex-start; }
-  .header h1 { font-size: 30px; font-weight: 700; margin-bottom: 6px; }
-  .header .title { font-size: 15px; color: #7eb8d4; margin-bottom: 18px; font-weight: 500; }
-  .header .contacts { display: flex; flex-direction: column; gap: 4px; text-align: right; font-size: 12.5px; opacity: .85; }
-  .header .contacts span { display: flex; align-items: center; justify-content: flex-end; gap: 6px; }
-  .header .summary { font-size: 13px; color: #c8dde8; line-height: 1.7; border-top: 1px solid rgba(255,255,255,.15); padding-top: 16px; max-width: 640px; }
-  .header .nav-link { color: rgba(255,255,255,.7); text-decoration: none; font-size: 11px; font-weight: 500; transition: color 0.2s ease; }
-  .header .nav-link:hover { color: #fff; }
+    .header {
+        background: #1a2a4a;
+        color: #fff;
+        padding: 32px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #7eb8d4;
+            margin-bottom: 10px;
+        }
+
+        .header .doc-label {
+            font-size: 11px;
+            letter-spacing: 5px;
+            opacity: .55;
+            text-transform: uppercase;
+        }
+
+        .header .meta {
+            text-align: right;
+            font-size: 12px;
+            opacity: .65;
+            line-height: 1.9;
+        }
+
+    /* =========================
+           문서 이동 링크
+        ========================= */
+
+    .nav-link {
+        display: inline-block;
+        margin-top: 6px;
+        color: rgba(255,255,255,.7);
+        text-decoration: none;
+        font-size: 11px;
+        font-weight: 500;
+        border-bottom: 1px solid rgba(255,255,255,.25);
+        transition: color .2s ease, border-color .2s ease;
+    }
+
+        .nav-link:hover {
+            color: #fff;
+            border-bottom-color: rgba(255,255,255,.8);
+        }
 
   /* 레이아웃 */
   .body { display: grid; grid-template-columns: 200px 1fr; }
@@ -103,290 +169,299 @@
 </style>
 </head>
 <body>
-<div class="page">
+    <div class="page">
 
-<!-- 헤더 -->
-<div class="header">
-  <div class="header-top">
-    <div>
-      <h1>손찬성</h1>
-      <div class="title">Unity 게임 클라이언트 개발자<br>
-        <a href="introduction.html" class="nav-link" target="_blank" rel="noopener noreferrer">자기소개서 보기</a></div>
-    </div>
-  </div>
-</div>
-
-<!-- 바디 -->
-<div class="body">
-
-<!-- 사이드바 -->
-<div class="sidebar">
-  <div class="sidebar-section">
-    <h3>기술 스택</h3>
-    <div class="skill-group">
-      <div class="sg-label">엔진 · 언어</div>
-      <span class="skill-tag main">Unity</span>
-      <span class="skill-tag main">C#</span>
-    </div>
-    <div class="skill-group">
-      <div class="sg-label">네트워크 · 백엔드</div>
-      <span class="skill-tag main">Firebase RTDB</span>
-      <span class="skill-tag">Firebase Auth</span>
-      <span class="skill-tag">실시간 동기화</span>
-      <span class="skill-tag">서버리스 설계</span>
-    </div>
-    <div class="skill-group">
-      <div class="sg-label">설계 패턴</div>
-      <span class="skill-tag">State Machine</span>
-      <span class="skill-tag">Strategy</span>
-      <span class="skill-tag">Template Method</span>
-      <span class="skill-tag">Factory</span>
-      <span class="skill-tag">Observer</span>
-      <span class="skill-tag">Object Pooling</span>
-    </div>
-    <div class="skill-group">
-      <div class="sg-label">Unity 기능</div>
-      <span class="skill-tag">Rigidbody Physics</span>
-      <span class="skill-tag">VFX Graph</span>
-      <span class="skill-tag">ScriptableObject</span>
-      <span class="skill-tag">Coroutine</span>
-      <span class="skill-tag">LineRenderer</span>
-      <span class="skill-tag">LeanPool</span>
-    </div>
-    <div class="skill-group">
-      <div class="sg-label">버전 관리</div>
-      <span class="skill-tag">Git</span>
-      <span class="skill-tag">UVCS</span>
-    </div>
-    <div class="skill-group">
-      <div class="sg-label">일정 · 툴</div>
-      <span class="skill-tag">WBS</span>
-      <span class="skill-tag">Unity Editor API</span>
-    </div>
-  </div>
-
-  <div class="sidebar-section">
-    <h3>학력</h3>
-    <p style="font-size:12px;color:#333;line-height:1.7">전문대 졸업<br>예체능 전공</p>
-  </div>
-
-  <div class="sidebar-section">
-    <h3>프로젝트 요약</h3>
-    <table class="info-table">
-      <tr><td>개인 1건</td><td>포탈 퍼즐 게임</td></tr>
-      <tr><td>팀 2건</td><td>뱀서라이크<br>멀티플레이</td></tr>
-    </table>
-  </div>
-
-  <div class="sidebar-section">
-    <h3>관심 분야</h3>
-    <p>게임 AI 시스템<br>네트워크 동기화<br>전투 시스템 설계<br>플레이어 경험 최적화</p>
-  </div>
-</div>
-
-<!-- 메인 -->
-<div class="main">
-
-  <!-- 프로젝트 경험 -->
-  <div class="section">
-    <div class="section-title">프로젝트 경험</div>
-
-    <!-- 우드득 -->
-    <div class="proj">
-      <div class="proj-head">
-        <div>
-          <div class="proj-name">🔥 우드득 (WOODUDUK) — 멀티플레이 네트워크 게임</div>
-        </div>
-        <div class="proj-meta">팀 프로젝트 · 개발 5인 QA 1인<br>담당: 데이터 · 네트워크</div>
-      </div>
-      <div class="proj-links">
-          <a href="https://drive.google.com/file/d/14Rt-IQmBs7twv9Qo_6kDIV9gItEivpBS/view?usp=sharing" target="_blank">🎬 플레이 영상</a>
-          <a href="https://sonks1126.github.io/Wooduduk/" target="_blank">⌨ 기술문서</a>
-          <a href="https://github.com/Sonks1126/Wooduduk.git" target="_blank">💻 GitHub</a>
-      </div>
-      <div class="proj-body">
-        <div class="proj-desc">
-          Firebase RTDB 기반의 실시간 멀티플레이 게임. 매칭·동기화·사망 정산·디버그 툴 등 데이터 및 네트워크 파트를 담당.
-        </div>
-
-        <div class="role-title">주요 구현</div>
-        <ul class="impl-list">
-          <li>
-            <strong>Firebase RTDB 매칭 시스템</strong>
-            <span class="impl-sub">— 단일 필드 쿼리 한계를 <code>stateAndTier</code> 복합키(예: "waiting_3")로 우회. 티어별 방 탐색 쿼리 구현</span>
-          </li>
-          <li>
-            <strong>실시간 플레이어 상태 동기화</strong>
-            <span class="impl-sub">— RoomLiveSync: 0.33초 간격 Firebase 갱신·구독. 고스트(AI) 플레이어 사망 처리 포함</span>
-          </li>
-          <li>
-            <strong>비동기 사망/순위 정산</strong>
-            <span class="impl-sub">— ServerValue.Timestamp 기반 사망 시각 기록 → 전원 사망 감지 시 시간 역순 정렬로 순위 자동 산정. 호스트 없이 누구든 기록 가능한 구조, <code>_gameEnded</code> 가드로 중복 방지</span>
-          </li>
-          <li>
-            <strong>Unity Editor 디버그 툴</strong>
-            <span class="impl-sub">— partial class 12개 파일 구성. 매칭·런종료·Firebase 탐색·밸런스 시뮬 등 탭 구성. 코나미 코드로 비밀 탭 해금 기능 포함</span>
-          </li>
-          <li>
-            <strong>네트워크 구조 전환 설계 경험</strong>
-            <span class="impl-sub">— FishNet + EdgeGap 기반 서버 멀티플레이를 실구현하여 동작시킨 후, 기획 전환으로 새 프로젝트(우드득)에 Firebase RTDB 서버리스 구조를 처음부터 설계·구현. 서버 기반과 서버리스 두 방식의 트레이드오프를 직접 경험</span>
-          </li>
-        </ul>
-        <div class="tech-row">
-          <span class="tech-tag">Firebase RTDB</span>
-          <span class="tech-tag">ServerValue.Timestamp</span>
-          <span class="tech-tag">실시간 동기화</span>
-          <span class="tech-tag">Unity Editor API</span>
-          <span class="tech-tag">Observer Pattern</span>
-          <span class="tech-tag">FishNet (실구현)</span>
-          <span class="tech-tag">EdgeGap (실구현)</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 룬바운드 -->
-    <div class="proj">
-      <div class="proj-head runebound">
-        <div>
-          <div class="proj-name">⚔️ Rune Bound Prototype — 뱀서라이크 게임</div>
-        </div>
-        <div class="proj-meta">팀 프로젝트 · 개발 4인 QA 1인<br>담당: 몬스터 · 보스 · 스테이지 · 스폰</div>
-      </div>
-      <div class="proj-links">
-          <a href="https://drive.google.com/file/d/1WKwVCiFOi6yFfugevPId_Z_Y7lj8B6bX/view?usp=sharing" target="_blank" class="rb">🎬 플레이 영상</a>
-          <a href="https://sonks1126.github.io/Rune_Bound/" target="_blank" class="rb">⌨ 기술문서</a>
-          <a href="https://github.com/Sonks1126/Rune_Bound.git" target="_blank" class="rb">💻 GitHub</a>
-      </div>
-      <div class="proj-body">
-        <div class="proj-desc runebound">
-          대량의 몬스터와 다단계 보스 전투를 중심으로 한 뱀서라이크 프로토타입. 몬스터 AI, 보스 패턴 시스템, 스테이지 구성, 스폰 시스템 전 파트를 설계·구현.
-        </div>
-
-        <div class="role-title runebound">일반 몬스터 AI</div>
-        <ul class="impl-list">
-          <li class="rb">
-            <strong class="rb">State Machine (FSM)</strong>
-            <span class="impl-sub">— IMonsterState 인터페이스 기반 5개 상태(Idle/Chase/Attack/Hit/Dead). MonsterBrain이 Sensor → 전환 판단 → StateChanger 흐름으로 매 프레임 처리</span>
-          </li>
-          <li class="rb">
-            <strong class="rb">Strategy Pattern (공격 전략)</strong>
-            <span class="impl-sub">— IAttackStrategy 인터페이스로 근접·원거리·돌진·자폭·소환마법사 5종 분리. MonsterStrategyFactory가 Init 시점에 MonsterData.attackType으로 전략 주입</span>
-          </li>
-          <li class="rb">
-            <strong class="rb">Template Method (MonsterBase)</strong>
-            <span class="impl-sub">— 스탯 스케일링, 사망, 아이템 드롭 공통 흐름 고정. NormalMonster / BossBase가 구체 동작만 오버라이드</span>
-          </li>
-        </ul>
-
-        <div class="role-title runebound">보스 패턴 시스템</div>
-        <ul class="impl-list">
-          <li class="rb">
-            <strong class="rb">Phase 기반 전환</strong>
-            <span class="impl-sub">— PhaseController가 HP 비율을 매 프레임 감시 → 임계값 도달 시 BossBrain.OnPhaseChanged() 호출. 현재 패턴 수행 중이면 예약 후 완료 시 전환</span>
-          </li>
-          <li class="rb">
-            <strong class="rb">PatternExecutor</strong>
-            <span class="impl-sub">— 우선순위 패턴 우선 탐색 후 일반 라운드로빈. preDelay(선딜레이) 지원. 패턴 못 찾으면 0.5초 대기 후 재탐색</span>
-          </li>
-          <li class="rb">
-            <strong class="rb">6가지 보스 패턴</strong>
-            <span class="impl-sub">— Meteor / Pickup / Slam / Summon / Throw / Trap. 각각 BossPattern(CanUse/CreateState) + IBossState(Enter/Update/Exit) 구조</span>
-          </li>
-          <li class="rb">
-            <strong class="rb">ScriptableObject 데이터 드라이븐</strong>
-            <span class="impl-sub">— BossData에 PhaseData 목록 → 각 페이즈별 PatternSet 지정. 코드 수정 없이 에디터에서 패턴 구성 변경 가능</span>
-          </li>
-        </ul>
-
-        <div class="role-title runebound">스테이지 & 스폰</div>
-        <ul class="impl-list">
-          <li class="rb">
-            <strong class="rb">StageManager</strong>
-            <span class="impl-sub">— 실시간 난이도 성장(_globalScale), 웨이브 자동 전환, 보스 페이즈 중 성장 중지·캐싱, 스테이지 간 보너스 배율 적용</span>
-          </li>
-          <li class="rb">
-            <strong class="rb">SpawnManager</strong>
-            <span class="impl-sub">— 가중치 기반 랜덤 몬스터 선택. SINGLE/CIRCLE/BURST 3가지 스폰 패턴. SPAWNRUSH·SPAWNEPIC·SPAWNBOSS 이벤트 타입. 지면 Raycast 보정 + LeanPool 오브젝트 풀링</span>
-          </li>
-        </ul>
-
-        <div class="tech-row">
-          <span class="tech-tag rb">State Machine</span>
-          <span class="tech-tag rb">Strategy Pattern</span>
-          <span class="tech-tag rb">Template Method</span>
-          <span class="tech-tag rb">ScriptableObject</span>
-          <span class="tech-tag rb">LeanPool</span>
-          <span class="tech-tag rb">EventBus</span>
-          <span class="tech-tag rb">Object Pooling</span>
-          <span class="tech-tag rb">VFX Graph</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 포탈 -->
-    <div class="proj">
-        <div class="proj-head portal">
+        <!-- 헤더 -->
+        <div class="header">
             <div>
-                <div class="proj-name">🌀 포탈 퍼즐 게임 (Portal 모작) — 개인 프로젝트</div>
+                <h1>손찬성</h1>
+                <div class="subtitle">
+                    Unity 게임 클라이언트 개발자
+                </div>
+                <div class="doc-label">
+                    이 력 서
+                </div>
             </div>
-            <div class="proj-meta">개인 프로젝트 · 1인 개발<br>전 파트 단독 구현</div>
+            <div class="meta">
+                지원 분야: 게임 클라이언트 개발<br>
+                <a href="자기소개서.html" class="nav-link" target="_blank" rel="noopener noreferrer">
+                    자기소개서 보기
+                </a>
+            </div>
+
         </div>
-        <div class="proj-links">
-            <a href="https://drive.google.com/file/d/1L22WzsjuBgNGl3YUrknewQAIk8V8dqa3/view?usp=sharing" target="_blank">🎬 플레이 영상</a>
-            <a href="https://sonks1126.github.io/Potal_imitation/" target="_blank">⌨ 기술문서</a>
-        </div>
-        <div class="proj-body">
-            <div class="proj-desc portal">
-                Valve Portal 시리즈의 핵심 메커닉을 Unity에서 직접 구현한 1인칭 퍼즐 프로토타입. 포탈 물리·배치 로직부터 환경 퍼즐·사운드까지 전 파트를 단독 개발.
+
+        <!-- 바디 -->
+        <div class="body">
+
+            <!-- 사이드바 -->
+            <div class="sidebar">
+                <div class="sidebar-section">
+                    <h3>기술 스택</h3>
+                    <div class="skill-group">
+                        <div class="sg-label">엔진 · 언어</div>
+                        <span class="skill-tag main">Unity</span>
+                        <span class="skill-tag main">C#</span>
+                    </div>
+                    <div class="skill-group">
+                        <div class="sg-label">네트워크 · 백엔드</div>
+                        <span class="skill-tag main">Firebase RTDB</span>
+                        <span class="skill-tag">Firebase Auth</span>
+                        <span class="skill-tag">실시간 동기화</span>
+                        <span class="skill-tag">서버리스 설계</span>
+                    </div>
+                    <div class="skill-group">
+                        <div class="sg-label">설계 패턴</div>
+                        <span class="skill-tag">State Machine</span>
+                        <span class="skill-tag">Strategy</span>
+                        <span class="skill-tag">Template Method</span>
+                        <span class="skill-tag">Factory</span>
+                        <span class="skill-tag">Observer</span>
+                        <span class="skill-tag">Object Pooling</span>
+                    </div>
+                    <div class="skill-group">
+                        <div class="sg-label">Unity 기능</div>
+                        <span class="skill-tag">Rigidbody Physics</span>
+                        <span class="skill-tag">VFX Graph</span>
+                        <span class="skill-tag">ScriptableObject</span>
+                        <span class="skill-tag">Coroutine</span>
+                        <span class="skill-tag">LineRenderer</span>
+                        <span class="skill-tag">LeanPool</span>
+                    </div>
+                    <div class="skill-group">
+                        <div class="sg-label">버전 관리</div>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">UVCS</span>
+                    </div>
+                    <div class="skill-group">
+                        <div class="sg-label">일정 · 툴</div>
+                        <span class="skill-tag">WBS</span>
+                        <span class="skill-tag">Unity Editor API</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>학력</h3>
+                    <p style="font-size:12px;color:#333;line-height:1.7">전문대 졸업<br>예체능 전공</p>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>프로젝트 요약</h3>
+                    <table class="info-table">
+                        <tr><td>개인 1건</td><td>포탈 퍼즐 게임</td></tr>
+                        <tr><td>팀 2건</td><td>뱀서라이크<br>멀티플레이</td></tr>
+                    </table>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>관심 분야</h3>
+                    <p>게임 AI 시스템<br>네트워크 동기화<br>전투 시스템 설계<br>플레이어 경험 최적화</p>
+                </div>
             </div>
 
-            <div class="role-title portal">주요 구현</div>
-            <ul class="impl-list">
-                <li class="portal">
-                    <strong class="portal">포탈 텔레포트 물리 수식</strong>
-                    <span class="impl-sub">— 입구 포탈 로컬 공간 기준으로 위치·회전·속도 세 가지를 변환 후 출구 포탈 월드 공간으로 역변환. 운동량(속도) 보존으로 관성 유지</span>
-                </li>
-                <li class="portal">
-                    <strong class="portal">포탈 배치 로직</strong>
-                    <span class="impl-sub">— 벽 경계 클램핑(가장자리 삐져나옴 방지), 벽 두께 검증, OverlapBox 겹침 차단 3단계 검증</span>
-                </li>
-                <li class="portal">
-                    <strong class="portal">충돌 처리 & 루프 방지</strong>
-                    <span class="impl-sub">— <code>_isTeleport</code> 플래그로 0.2초 재진입 차단. ReadyToPortal로 통과 직전 충돌 레이어 무시 처리</span>
-                </li>
-                <li class="portal">
-                    <strong class="portal">오브젝트 잡기</strong>
-                    <span class="impl-sub">— Rigidbody.MovePosition + Vector3.Lerp으로 부드럽게 끌어당기는 Grab 시스템. 중력·회전 제어 포함</span>
-                </li>
-                <li class="portal">
-                    <strong class="portal">환경 인터랙션</strong>
-                    <span class="impl-sub">— 압력 버튼(PushButton: 스쿼시 애니메이션), 엘리베이터 시퀀스(문 열기→플레이어 이동→목적지 이동 코루틴), 큐브 디스펜서</span>
-                </li>
-            </ul>
+            <!-- 메인 -->
+            <div class="main">
 
-            <div class="limit-box">
-                <div class="lt">⚠ 미구현 사항 (기술적 한계 · 시간 제약)</div>
-                <ul>
-                    <li>Render Texture 카메라 미적용 — 포탈 내부에 상대 포탈 시야가 렌더링되지 않음 (RenderTexture + 카메라 위치 동기화 방식 학습 필요)</li>
-                    <li>포탈 통과 연출 미구현 — Stencil Buffer + Oblique Near-Clip Projection을 활용한 반신 통과 화면 처리 부재</li>
-                </ul>
-            </div>
+                <!-- 프로젝트 경험 -->
+                <div class="section">
+                    <div class="section-title">프로젝트 경험</div>
 
-            <div class="tech-row">
-                <span class="tech-tag portal">Rigidbody Physics</span>
-                <span class="tech-tag portal">LineRenderer</span>
-                <span class="tech-tag portal">VFX Graph</span>
-                <span class="tech-tag portal">Coroutine</span>
-                <span class="tech-tag portal">Physics.OverlapBox</span>
-                <span class="tech-tag portal">1인 전체 개발</span>
-            </div>
-        </div>
-    </div>
+                    <!-- 우드득 -->
+                    <div class="proj">
+                        <div class="proj-head">
+                            <div>
+                                <div class="proj-name">🔥 우드득 (WOODUDUK) — 멀티플레이 네트워크 게임</div>
+                            </div>
+                            <div class="proj-meta">팀 프로젝트 · 개발 5인 QA 1인<br>담당: 데이터 · 네트워크</div>
+                        </div>
+                        <div class="proj-links">
+                            <a href="https://drive.google.com/file/d/14Rt-IQmBs7twv9Qo_6kDIV9gItEivpBS/view?usp=sharing" target="_blank">🎬 플레이 영상</a>
+                            <a href="https://sonks1126.github.io/Wooduduk/" target="_blank">⌨ 기술문서</a>
+                            <a href="https://github.com/Sonks1126/Wooduduk.git" target="_blank">💻 GitHub</a>
+                        </div>
+                        <div class="proj-body">
+                            <div class="proj-desc">
+                                Firebase RTDB 기반의 실시간 멀티플레이 게임. 매칭·동기화·사망 정산·디버그 툴 등 데이터 및 네트워크 파트를 담당.
+                            </div>
 
-  </div><!-- /section -->
+                            <div class="role-title">주요 구현</div>
+                            <ul class="impl-list">
+                                <li>
+                                    <strong>Firebase RTDB 매칭 시스템</strong>
+                                    <span class="impl-sub">— 단일 필드 쿼리 한계를 <code>stateAndTier</code> 복합키(예: "waiting_3")로 우회. 티어별 방 탐색 쿼리 구현</span>
+                                </li>
+                                <li>
+                                    <strong>실시간 플레이어 상태 동기화</strong>
+                                    <span class="impl-sub">— RoomLiveSync: 0.33초 간격 Firebase 갱신·구독. 고스트(AI) 플레이어 사망 처리 포함</span>
+                                </li>
+                                <li>
+                                    <strong>비동기 사망/순위 정산</strong>
+                                    <span class="impl-sub">— ServerValue.Timestamp 기반 사망 시각 기록 → 전원 사망 감지 시 시간 역순 정렬로 순위 자동 산정. 호스트 없이 누구든 기록 가능한 구조, <code>_gameEnded</code> 가드로 중복 방지</span>
+                                </li>
+                                <li>
+                                    <strong>Unity Editor 디버그 툴</strong>
+                                    <span class="impl-sub">— partial class 12개 파일 구성. 매칭·런종료·Firebase 탐색·밸런스 시뮬 등 탭 구성. 코나미 코드로 비밀 탭 해금 기능 포함</span>
+                                </li>
+                                <li>
+                                    <strong>네트워크 구조 전환 설계 경험</strong>
+                                    <span class="impl-sub">— FishNet + EdgeGap 기반 서버 멀티플레이를 실구현하여 동작시킨 후, 기획 전환으로 새 프로젝트(우드득)에 Firebase RTDB 서버리스 구조를 처음부터 설계·구현. 서버 기반과 서버리스 두 방식의 트레이드오프를 직접 경험</span>
+                                </li>
+                            </ul>
+                            <div class="tech-row">
+                                <span class="tech-tag">Firebase RTDB</span>
+                                <span class="tech-tag">ServerValue.Timestamp</span>
+                                <span class="tech-tag">실시간 동기화</span>
+                                <span class="tech-tag">Unity Editor API</span>
+                                <span class="tech-tag">Observer Pattern</span>
+                                <span class="tech-tag">FishNet (실구현)</span>
+                                <span class="tech-tag">EdgeGap (실구현)</span>
+                            </div>
+                        </div>
+                    </div>
 
-</div><!-- /main -->
-</div><!-- /body -->
-</div><!-- /page -->
+                    <!-- 룬바운드 -->
+                    <div class="proj">
+                        <div class="proj-head runebound">
+                            <div>
+                                <div class="proj-name">⚔️ Rune Bound Prototype — 뱀서라이크 게임</div>
+                            </div>
+                            <div class="proj-meta">팀 프로젝트 · 개발 4인 QA 1인<br>담당: 몬스터 · 보스 · 스테이지 · 스폰</div>
+                        </div>
+                        <div class="proj-links">
+                            <a href="https://drive.google.com/file/d/1WKwVCiFOi6yFfugevPId_Z_Y7lj8B6bX/view?usp=sharing" target="_blank" class="rb">🎬 플레이 영상</a>
+                            <a href="https://sonks1126.github.io/Rune_Bound/" target="_blank" class="rb">⌨ 기술문서</a>
+                            <a href="https://github.com/Sonks1126/Rune_Bound.git" target="_blank" class="rb">💻 GitHub</a>
+                        </div>
+                        <div class="proj-body">
+                            <div class="proj-desc runebound">
+                                대량의 몬스터와 다단계 보스 전투를 중심으로 한 뱀서라이크 프로토타입. 몬스터 AI, 보스 패턴 시스템, 스테이지 구성, 스폰 시스템 전 파트를 설계·구현.
+                            </div>
+
+                            <div class="role-title runebound">일반 몬스터 AI</div>
+                            <ul class="impl-list">
+                                <li class="rb">
+                                    <strong class="rb">State Machine (FSM)</strong>
+                                    <span class="impl-sub">— IMonsterState 인터페이스 기반 5개 상태(Idle/Chase/Attack/Hit/Dead). MonsterBrain이 Sensor → 전환 판단 → StateChanger 흐름으로 매 프레임 처리</span>
+                                </li>
+                                <li class="rb">
+                                    <strong class="rb">Strategy Pattern (공격 전략)</strong>
+                                    <span class="impl-sub">— IAttackStrategy 인터페이스로 근접·원거리·돌진·자폭·소환마법사 5종 분리. MonsterStrategyFactory가 Init 시점에 MonsterData.attackType으로 전략 주입</span>
+                                </li>
+                                <li class="rb">
+                                    <strong class="rb">Template Method (MonsterBase)</strong>
+                                    <span class="impl-sub">— 스탯 스케일링, 사망, 아이템 드롭 공통 흐름 고정. NormalMonster / BossBase가 구체 동작만 오버라이드</span>
+                                </li>
+                            </ul>
+
+                            <div class="role-title runebound">보스 패턴 시스템</div>
+                            <ul class="impl-list">
+                                <li class="rb">
+                                    <strong class="rb">Phase 기반 전환</strong>
+                                    <span class="impl-sub">— PhaseController가 HP 비율을 매 프레임 감시 → 임계값 도달 시 BossBrain.OnPhaseChanged() 호출. 현재 패턴 수행 중이면 예약 후 완료 시 전환</span>
+                                </li>
+                                <li class="rb">
+                                    <strong class="rb">PatternExecutor</strong>
+                                    <span class="impl-sub">— 우선순위 패턴 우선 탐색 후 일반 라운드로빈. preDelay(선딜레이) 지원. 패턴 못 찾으면 0.5초 대기 후 재탐색</span>
+                                </li>
+                                <li class="rb">
+                                    <strong class="rb">6가지 보스 패턴</strong>
+                                    <span class="impl-sub">— Meteor / Pickup / Slam / Summon / Throw / Trap. 각각 BossPattern(CanUse/CreateState) + IBossState(Enter/Update/Exit) 구조</span>
+                                </li>
+                                <li class="rb">
+                                    <strong class="rb">ScriptableObject 데이터 드라이븐</strong>
+                                    <span class="impl-sub">— BossData에 PhaseData 목록 → 각 페이즈별 PatternSet 지정. 코드 수정 없이 에디터에서 패턴 구성 변경 가능</span>
+                                </li>
+                            </ul>
+
+                            <div class="role-title runebound">스테이지 & 스폰</div>
+                            <ul class="impl-list">
+                                <li class="rb">
+                                    <strong class="rb">StageManager</strong>
+                                    <span class="impl-sub">— 실시간 난이도 성장(_globalScale), 웨이브 자동 전환, 보스 페이즈 중 성장 중지·캐싱, 스테이지 간 보너스 배율 적용</span>
+                                </li>
+                                <li class="rb">
+                                    <strong class="rb">SpawnManager</strong>
+                                    <span class="impl-sub">— 가중치 기반 랜덤 몬스터 선택. SINGLE/CIRCLE/BURST 3가지 스폰 패턴. SPAWNRUSH·SPAWNEPIC·SPAWNBOSS 이벤트 타입. 지면 Raycast 보정 + LeanPool 오브젝트 풀링</span>
+                                </li>
+                            </ul>
+
+                            <div class="tech-row">
+                                <span class="tech-tag rb">State Machine</span>
+                                <span class="tech-tag rb">Strategy Pattern</span>
+                                <span class="tech-tag rb">Template Method</span>
+                                <span class="tech-tag rb">ScriptableObject</span>
+                                <span class="tech-tag rb">LeanPool</span>
+                                <span class="tech-tag rb">EventBus</span>
+                                <span class="tech-tag rb">Object Pooling</span>
+                                <span class="tech-tag rb">VFX Graph</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 포탈 -->
+                    <div class="proj">
+                        <div class="proj-head portal">
+                            <div>
+                                <div class="proj-name">🌀 포탈 퍼즐 게임 (Portal 모작) — 개인 프로젝트</div>
+                            </div>
+                            <div class="proj-meta">개인 프로젝트 · 1인 개발<br>전 파트 단독 구현</div>
+                        </div>
+                        <div class="proj-links">
+                            <a href="https://drive.google.com/file/d/1L22WzsjuBgNGl3YUrknewQAIk8V8dqa3/view?usp=sharing" target="_blank">🎬 플레이 영상</a>
+                            <a href="https://sonks1126.github.io/Potal_imitation/" target="_blank">⌨ 기술문서</a>
+                        </div>
+                        <div class="proj-body">
+                            <div class="proj-desc portal">
+                                Valve Portal 시리즈의 핵심 메커닉을 Unity에서 직접 구현한 1인칭 퍼즐 프로토타입. 포탈 물리·배치 로직부터 환경 퍼즐·사운드까지 전 파트를 단독 개발.
+                            </div>
+
+                            <div class="role-title portal">주요 구현</div>
+                            <ul class="impl-list">
+                                <li class="portal">
+                                    <strong class="portal">포탈 텔레포트 물리 수식</strong>
+                                    <span class="impl-sub">— 입구 포탈 로컬 공간 기준으로 위치·회전·속도 세 가지를 변환 후 출구 포탈 월드 공간으로 역변환. 운동량(속도) 보존으로 관성 유지</span>
+                                </li>
+                                <li class="portal">
+                                    <strong class="portal">포탈 배치 로직</strong>
+                                    <span class="impl-sub">— 벽 경계 클램핑(가장자리 삐져나옴 방지), 벽 두께 검증, OverlapBox 겹침 차단 3단계 검증</span>
+                                </li>
+                                <li class="portal">
+                                    <strong class="portal">충돌 처리 & 루프 방지</strong>
+                                    <span class="impl-sub">— <code>_isTeleport</code> 플래그로 0.2초 재진입 차단. ReadyToPortal로 통과 직전 충돌 레이어 무시 처리</span>
+                                </li>
+                                <li class="portal">
+                                    <strong class="portal">오브젝트 잡기</strong>
+                                    <span class="impl-sub">— Rigidbody.MovePosition + Vector3.Lerp으로 부드럽게 끌어당기는 Grab 시스템. 중력·회전 제어 포함</span>
+                                </li>
+                                <li class="portal">
+                                    <strong class="portal">환경 인터랙션</strong>
+                                    <span class="impl-sub">— 압력 버튼(PushButton: 스쿼시 애니메이션), 엘리베이터 시퀀스(문 열기→플레이어 이동→목적지 이동 코루틴), 큐브 디스펜서</span>
+                                </li>
+                            </ul>
+
+                            <div class="limit-box">
+                                <div class="lt">⚠ 미구현 사항 (기술적 한계 · 시간 제약)</div>
+                                <ul>
+                                    <li>Render Texture 카메라 미적용 — 포탈 내부에 상대 포탈 시야가 렌더링되지 않음 (RenderTexture + 카메라 위치 동기화 방식 학습 필요)</li>
+                                    <li>포탈 통과 연출 미구현 — Stencil Buffer + Oblique Near-Clip Projection을 활용한 반신 통과 화면 처리 부재</li>
+                                </ul>
+                            </div>
+
+                            <div class="tech-row">
+                                <span class="tech-tag portal">Rigidbody Physics</span>
+                                <span class="tech-tag portal">LineRenderer</span>
+                                <span class="tech-tag portal">VFX Graph</span>
+                                <span class="tech-tag portal">Coroutine</span>
+                                <span class="tech-tag portal">Physics.OverlapBox</span>
+                                <span class="tech-tag portal">1인 전체 개발</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /section -->
+
+            </div><!-- /main -->
+        </div><!-- /body -->
+    </div><!-- /page -->
 </body>
 </html>
